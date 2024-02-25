@@ -1,0 +1,344 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+    </head>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-container">
+                <img src="./icon-waffle.png" alt="Left Image">
+                <img src="./icon_linkedin.png" alt="Right Image" class="right-image">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="profile_container">
+                <img src="./Group 11259.png" alt="Left Image" >
+                <img src="./Mask Group 179.png" alt="Right Image " class="image_space">
+            </div>
+           
+        </header>
+
+        
+
+        <div class="row heading">Create job request</div>
+            
+            <div class="row">
+                <div class= "col-8">
+
+                    <div class="row ">
+                        <div class="left-container">
+                            <form id="myForm" onsubmit="validateForm()">
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="jobTitle" class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" required>
+                                    </div>
+                
+                                    <div class="col">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="requestDate" class="form-label">Request Date</label>
+                                        <input type="date" class="form-control" id="requestDate" name="requestDate" required>
+                                    </div>
+                
+                                    <div class="col">
+                                        <label for="time" class="form-label">Time</label>
+                                        <input type="time" class="form-control" id="time" name="time" required>
+                                    </div>
+                
+                                    <div class="col">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" name="location" required>
+                                    </div>
+                                </div>
+
+            
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="quarter" class="form-label">Quarter</label>
+                                        <select class="form-select dropdown-customisation" id="quarter" name="quarter" required >
+                                            <option value="" selected disabled>Select Quarter</option>
+                                            <option value="Q1">Q1</option>
+                                            <option value="Q2">Q2</option>
+                                            <option value="Q3">Q3</option>
+                                            <option value="Q4">Q4</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="col">
+                                        <label for="state" class="form-label">State</label>
+                                        <input type="text" class="form-control" id="state" name="state" required>
+                                    </div>
+                                </div>
+                
+                                <div class="row mb-3">
+                                    <div class="col spacing-primaryskill">
+                                        <label class="form-label">Primary Skills</label>
+                                        <div class="form-group">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="primarySkills" id="angular" value="Angular">
+                                                <label class="form-check-label" for="angular">Angular</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="primarySkills" id="react" value="React">
+                                                <label class="form-check-label" for="react">React</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            
+                        </div>
+                    </div>
+
+                    <div class="row container-table">
+                        <div class="second-left-container">                    
+                            <p class="table_heading">Educational Requirement</p>
+                    
+                            <table id="educationalTable" class="table table-borderless table_top">
+                                <thead>
+                                    <tr>
+                                        <th>Educational</th>
+                                        <th>Field of Education</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                            <hr>
+
+
+                            <span style="cursor: pointer;" onclick="addNewRow()">+ Add New</span>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="col-4 ">
+                    <div class="row ">
+                        <div class="right-container">
+                        
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="preferredChannelToggle">
+                            <label class="toggle-label" for="preferredChannelToggle">Preferred Channel</label>
+                        </div>
+            
+                        <div id="imageSelection">
+                           
+                        </div>
+            
+                        <div class="add-new" onclick="openFileExplorer()">+ Add New</div>
+                      <input type="file" id="fileInput" multiple onchange="handleFileSelection()">
+                    </div>
+                    </div>
+
+                    <div class="row container-table" >
+                        <div class="second-right-container">
+                            <p class="table_heading" > Support team</p>
+                            <!-- Card 1 -->
+                            <div class="row card card_style" id="card_alignment" >
+                                    <div class="col-2">
+                                        <div class="Initial_circle" >
+                                            JG
+                                        </div>
+                                    </div>
+                                    <div class="col-8 support_member" >
+                                        Jane Goodall
+                                    </div>
+                                    <div class="col-1" id="mail_image" >
+                                        <img src="./icon-mail.png" alt="Icon 1 ">
+                                    </div>
+                                    <div class="col-1" id="call_image">
+                                        <img src="./icon-call.png" alt="Icon 1">
+
+                                    </div>
+                            </div>
+
+                            <div class="row card card_style" id="card_alignment">
+                                    <div class="col-2">
+                                        <div class= "Initial_circle" >
+                                            JG
+                                        </div>
+                                    </div>
+                                    <div class="col-8 support_member" >
+                                        Jane Goodall
+                                    </div>
+                                    <div class="col-1" id="mail_image">
+                                        <img src="./icon-mail.png" alt="Icon 1"  >
+                                    </div>
+                                    <div class="col-1" id="call_image">
+                                        <img src="./icon-call.png" alt="Icon 1">
+
+                                    </div>
+                            </div>
+
+                            <div class="row " id=view_more>
+                                <div class="col-3">
+                                    <p class="text_view_more">View More</p>
+                                </div>
+                            </div>
+                            
+                    </div>
+                    </div>
+                </div>
+
+                <hr id="separator" >
+
+                <div class="row button_changes">
+                    <div class="col-2 button_div">
+                        <button type="submit" class="btn btn-dark submit-button" onclick="validateForm()"
+                        >Submit</button>
+                    </div>
+                    <div class="col-2 cancel_div">
+                        <button type="button" class="btn btn-light " id="cancel_button">Cancel</button>
+                    </div>
+                    <div class="col-10 alignment">
+                       
+                </div>
+            </form>
+            </div>
+            
+
+        <script>
+            function openFileExplorer() {
+                document.getElementById("fileInput").click();
+            }
+    
+            function handleFileSelection() {
+                var files = document.getElementById("fileInput").files;
+                var imageSelection = document.getElementById("imageSelection");
+    
+                for (var i = 0; i < files.length; i++) {
+                    var chip = document.createElement("div");
+                    chip.classList.add("chip");
+                    chip.innerHTML = files[i].name + '<span class="chip-close" onclick="removeChip(this)">x</span>';
+                    imageSelection.appendChild(chip);
+                }
+            }
+    
+            function removeChip(chip) {
+                chip.parentNode.remove();
+            }
+
+
+            //json data
+            var jsonData = {
+                "jobTitle": "Software Developer",
+                "email": "example@email.com",
+                "requestDate": "2024-02-25",
+                "time": "10:00",
+                "location": "Sample Location",
+                "quarter": "Q1",
+                "state": "Sample State",
+                "primarySkills": "Angular",
+                "educationalRequirements": [
+                    {"educational": "Bachelor's Degree", "fieldOfEducation": "Computer Science"},
+                    {"educational": "Master's Degree", "fieldOfEducation": "Electrical Engineering"},
+                    {"educational": "Master's Degree", "fieldOfEducation": "Electrical Engineering"}
+                ]
+            };
+    
+
+            // Function to fill form fields with JSON data
+            function fillForm() {
+                document.getElementById("jobTitle").value = jsonData.jobTitle;
+                document.getElementById("email").value = jsonData.email;
+                document.getElementById("requestDate").value = jsonData.requestDate;
+                document.getElementById("time").value = jsonData.time;
+                document.getElementById("location").value = jsonData.location;
+                document.getElementById("quarter").value = jsonData.quarter;
+                document.getElementById("state").value = jsonData.state;
+    
+                var primarySkillsRadio = document.getElementsByName("primarySkills");
+                for (var i = 0; i < primarySkillsRadio.length; i++) {
+                    if (primarySkillsRadio[i].value === jsonData.primarySkills) {
+                        primarySkillsRadio[i].checked = true;
+                    }
+                }
+    
+                var tableBody = document.querySelector("#educationalTable tbody");
+jsonData.educationalRequirements.forEach(function (eduReq) {
+    var row = tableBody.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = eduReq.educational;
+    cell2.innerHTML = eduReq.fieldOfEducation;
+
+    cell3.innerHTML = '<div class="action-images">' +
+        '<img src="./icon-edit.png" alt="Image 1">' +
+        '<img src="./icon-trash.png" alt="Image 2">' +
+        '</div>';
+});
+            }
+           
+            window.onload = fillForm;
+
+
+            function validateForm() {
+                var jobTitle = document.getElementById("jobTitle").value;
+                var email = document.getElementById("email").value;
+                var location = document.getElementById("location").value;
+                var date = document.getElementById("requestDate").value;
+                var time = document.getElementById("time").value;
+                var quarter = document.getElementById("quarter").value;
+                var state = document.getElementById("state").value;
+                
+                if (jobTitle.trim() === "") {
+                    alert("Job Title must be filled out");
+                    return false;
+                }
+        
+                if (email.trim() === "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+        
+                if (location.trim() === "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+        
+                if (date.trim() === "") {
+                    alert("Date must be filled out");
+                    return false;
+                }
+        
+                if (time.trim() === "") {
+                    alert("time must be filled out");
+                    return false;
+                }
+        
+                if (quarter.trim() === "") {
+                    alert("Quarter must be filled out");
+                    return false;
+                }
+        
+                if (state.trim() === "") {
+                    alert("Quarter must be filled out");
+                    return false;
+                }
+        
+                return true;
+            }
+        </script>
+
+    </body>
+
+</html>
